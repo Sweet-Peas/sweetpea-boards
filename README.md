@@ -1,4 +1,6 @@
-# Customization package for all Arduino compatible boards from Electronic Sweet Peas.
+# sweetpea-boards
+
+## Customization package for all Arduino compatible boards from Electronic Sweet Peas.
 
 This package installs all the necessary board level files for our Arduino (as in the IDE) compatible boards. Here's a short description on how to install the package.
 
@@ -16,7 +18,7 @@ The current package supports the following boards:
 
 We will add new boards as they become available.
 
-# Bugs and suggestions
+## Bugs and suggestions
 
 If you find errors or have interesting suggestions use the issue tracker to shoot us a message.
 
