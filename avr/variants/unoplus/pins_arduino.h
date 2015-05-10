@@ -20,6 +20,25 @@
   Boston, MA  02111-1307  USA
 
   $Id: wiring.h 249 2007-02-03 16:52:51Z mellis $
+
+  Adapted to fit the Uno+ series boards by: 
+    Electronic Sweet Peas
+    Pontus Oldberg
+
+  Description:
+    The Uno+ board and derivatives has a slightly different mapping
+    of the ADC channels than the Arduino Uno. In order to be able to
+    use the I2C channel without having to sacrifice two analog
+    channels, we are using the two extra ADC channels (ADC6 and ADC7)
+    that the TQFP version of the ATMega328P device have available.
+    These two inputs have been routed to AIN4 and AIN5 and this file
+    are remapping them to be able to be used by the Arduino 
+    environment.
+
+    If the I2C channel is not being used you can still use the old
+    analog inputs but now as AIN6 and AIN7, available on the SDA and
+    SCL pins on the board, which effectlively means that you have 8 
+    analog inputs.
 */
 
 #ifndef Pins_Arduino_h
@@ -28,7 +47,7 @@
 #include <avr/pgmspace.h>
 
 #define NUM_DIGITAL_PINS            20
-#define NUM_ANALOG_INPUTS           6
+#define NUM_ANALOG_INPUTS           8
 #define analogInputToDigitalPin(p)  ((p < 6) ? (p) + 14 : -1)
 
 #if defined(__AVR_ATmega8__)
@@ -46,14 +65,14 @@ static const uint8_t SDA = 18;
 static const uint8_t SCL = 19;
 #define LED_BUILTIN 13
 
+// Uno+ does not have GPIO on A4 and A5 instead PC4 and PC5 can be addressed
+// on SDA and SCL who can also double as analog input.
 static const uint8_t A0 = 14;
 static const uint8_t A1 = 15;
 static const uint8_t A2 = 16;
 static const uint8_t A3 = 17;
-static const uint8_t A4 = 18;
-static const uint8_t A5 = 19;
-static const uint8_t A6 = 20;
-static const uint8_t A7 = 21;
+static const uint8_t A6 = 18;
+static const uint8_t A7 = 19;
 
 #define digitalPinToPCICR(p)    (((p) >= 0 && (p) <= 21) ? (&PCICR) : ((uint8_t *)0))
 #define digitalPinToPCICRbit(p) (((p) <= 7) ? 2 : (((p) <= 13) ? 0 : 1))
@@ -62,7 +81,23 @@ static const uint8_t A7 = 21;
 
 #define digitalPinToInterrupt(p)  ((p) == 2 ? 0 : ((p) == 3 ? 1 : NOT_AN_INTERRUPT))
 
+// The Uno+ is using the two extra device ADC channels 6 and 7 mappped to AIN4 and AIN5
+//   and device ADC channels 4 and 5 mapped to AIN6 and AIN7
+extern const uint8_t PROGMEM analog_pin_to_channel_PGM[];
+#define analogPinToChannel(P)  ( pgm_read_byte( analog_pin_to_channel_PGM + (P) ) )
+
 #ifdef ARDUINO_MAIN
+
+const uint8_t PROGMEM analog_pin_to_channel_PGM[] = {
+    0,	// A0  PC0   ADC0
+    1,	// A1  PC1   ADC1
+    2,	// A2  PC2   ADC2
+    3,	// A3  PC3   ADC3
+    6,	// A4  ADC6  (No GPIO)
+    7,	// A5  ADC7  (No GPIO)
+    4,	// A6  PC4   ADC4
+    5,	// A7  PC5   ADC5
+};
 
 // On the Arduino board, digital pins are also used
 // for the analog output (software PWM).  Analog input

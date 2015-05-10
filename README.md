@@ -1,6 +1,12 @@
-# sweetpea-boards
+## sweetpea-boards
 
-## Customization package for all Arduino compatible boards from Electronic Sweet Peas.
+### Customization package for all Arduino compatible boards from Electronic Sweet Peas.
+
+### News
+
+ * (2015-05-10) The Uno+ and the upcoming UnoESP+ boards are using a new mapping of the analog signals and for this to work properly this package must be installed.
+
+### General info and installation instructions
 
 This package installs all the necessary board level files for our Arduino (as in the IDE) compatible boards. Here's a short description on how to install the package.
 
@@ -18,7 +24,9 @@ The current package supports the following boards:
 
 We will add new boards as they become available.
 
-## Bugs and suggestions
+### Bugs and suggestions
 
 If you find errors or have interesting suggestions use the issue tracker to shoot us a message.
+
+If you feel like conributing to this package simply create your own fork of this project and when you are done submit a pull request. We're always interested in improvements and suggestion.
 
