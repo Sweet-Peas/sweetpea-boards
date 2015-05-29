@@ -22,6 +22,30 @@ unoplus.build.board=AVR_SP_UNO_PLUS
 unoplus.build.core=arduino:arduino
 unoplus.build.variant=unoplus
 
+###############################################################
+
+unoplus.name=SweetPea UnoESP+
+
+unoplus.upload.tool=avrdude
+unoplus.upload.protocol=arduino
+unoplus.upload.maximum_size=32256
+unoplus.upload.maximum_data_size=2048
+unoplus.upload.speed=115200
+
+unoplus.bootloader.tool=avrdude
+unoplus.bootloader.low_fuses=0xFF
+unoplus.bootloader.high_fuses=0xDE
+unoplus.bootloader.extended_fuses=0x05
+unoplus.bootloader.unlock_bits=0x3F
+unoplus.bootloader.lock_bits=0x0F
+unoplus.bootloader.file=optiboot/optiboot_atmega328.hex
+
+unoplus.build.mcu=atmega328p
+unoplus.build.f_cpu=16000000L
+unoplus.build.board=AVR_SP_UNOESP_PLUS
+unoplus.build.core=arduino:arduino
+unoplus.build.variant=unoplus
+
 ##############################################################
 
 unonet.name=SweetPea UnoNet+
