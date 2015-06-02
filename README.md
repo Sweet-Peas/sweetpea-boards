@@ -18,6 +18,7 @@ This package installs all the necessary board level files for our Arduino (as in
 The current package supports the following boards:
 
  * SweetPea Uno+
+ * SweetPea UnoESP+
  * SweetPea UnoNet+
  * SweetPea Leonardo
  * SweetPea LeoFi
