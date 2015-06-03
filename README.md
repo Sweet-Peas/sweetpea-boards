@@ -4,6 +4,7 @@
 
 ### News
 
+ * (2015-06-03) Updated with the new UnoESP+ board (http://wiki.sweetpeas.se/index.php?title=SweetPea_UnoESP).
  * (2015-05-10) The Uno+ and the upcoming UnoESP+ boards are using a new mapping of the analog signals and for this to work properly this package must be installed.
 
 ### General info and installation instructions
