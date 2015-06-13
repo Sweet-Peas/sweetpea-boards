@@ -1,6 +1,6 @@
 ##############################################################
 
-unoplus.name=SweetPea Uno+
+unoplus.name=SweetPea Uno/Uno+
 
 unoplus.upload.tool=avrdude
 unoplus.upload.protocol=arduino
@@ -24,7 +24,7 @@ unoplus.build.variant=unoplus
 
 ###############################################################
 
-unoesp.name=SweetPea UnoESP+
+unoesp.name=SweetPea UnoESP/UnoESP+
 
 unoesp.upload.tool=avrdude
 unoesp.upload.protocol=arduino
@@ -48,7 +48,7 @@ unoesp.build.variant=unoplus
 
 ##############################################################
 
-unonet.name=SweetPea UnoNet+
+unonet.name=SweetPea UnoNet/UnoNet+
 
 unonet.upload.tool=avrdude
 unonet.upload.protocol=arduino
