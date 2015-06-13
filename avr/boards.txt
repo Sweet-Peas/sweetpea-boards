@@ -24,27 +24,27 @@ unoplus.build.variant=unoplus
 
 ###############################################################
 
-unoplus.name=SweetPea UnoESP+
+unoesp.name=SweetPea UnoESP+
 
-unoplus.upload.tool=avrdude
-unoplus.upload.protocol=arduino
-unoplus.upload.maximum_size=32256
-unoplus.upload.maximum_data_size=2048
-unoplus.upload.speed=115200
+unoesp.upload.tool=avrdude
+unoesp.upload.protocol=arduino
+unoesp.upload.maximum_size=32256
+unoesp.upload.maximum_data_size=2048
+unoesp.upload.speed=115200
 
-unoplus.bootloader.tool=avrdude
-unoplus.bootloader.low_fuses=0xFF
-unoplus.bootloader.high_fuses=0xDE
-unoplus.bootloader.extended_fuses=0x05
-unoplus.bootloader.unlock_bits=0x3F
-unoplus.bootloader.lock_bits=0x0F
-unoplus.bootloader.file=optiboot/optiboot_atmega328.hex
+unoesp.bootloader.tool=avrdude
+unoesp.bootloader.low_fuses=0xFF
+unoesp.bootloader.high_fuses=0xDE
+unoesp.bootloader.extended_fuses=0x05
+unoesp.bootloader.unlock_bits=0x3F
+unoesp.bootloader.lock_bits=0x0F
+unoesp.bootloader.file=optiboot/optiboot_atmega328.hex
 
-unoplus.build.mcu=atmega328p
-unoplus.build.f_cpu=16000000L
-unoplus.build.board=AVR_SP_UNOESP_PLUS
-unoplus.build.core=arduino:arduino
-unoplus.build.variant=unoplus
+unoesp.build.mcu=atmega328p
+unoesp.build.f_cpu=16000000L
+unoesp.build.board=AVR_SP_UNOESP_PLUS
+unoesp.build.core=arduino:arduino
+unoesp.build.variant=unoplus
 
 ##############################################################
 
