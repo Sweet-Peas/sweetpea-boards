@@ -4,6 +4,7 @@
 
 ### News
 
+ * (2015-06-08) Updated the names of the boards to make it clear that the package is for the non NFC capable boards as well.
  * (2015-06-03) Updated with the new UnoESP+ board (http://wiki.sweetpeas.se/index.php?title=SweetPea_UnoESP).
  * (2015-05-10) The Uno+ and the upcoming UnoESP+ boards are using a new mapping of the analog signals and for this to work properly this package must be installed.
 
@@ -18,9 +19,9 @@ This package installs all the necessary board level files for our Arduino (as in
 
 The current package supports the following boards:
 
- * SweetPea Uno+
- * SweetPea UnoESP+
- * SweetPea UnoNet+
+ * SweetPea Uno/Uno+
+ * SweetPea UnoESP/UnoESP+
+ * SweetPea UnoNet/UnoNet+
  * SweetPea Leonardo
  * SweetPea LeoFi
 
